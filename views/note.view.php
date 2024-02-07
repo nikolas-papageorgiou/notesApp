@@ -10,12 +10,12 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
   </header>
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-      <?php foreach($notes as $note):?>
-        <li>
-          <a href="/notesApp/index.php/note?id=<?= $note['id']?>" class='text-blue-500 hover:underline'>
-          <?= $note['body'] ?></a>
-        </li>
-        <?php endforeach;?>
+     
+          <p><?= $note['body'] ?></p>
+    <p class = "mt-6 text-blue-500 hover:underline">
+    
+      <a href="/notesApp/index.php/notes">Go back to notes</a>
+</p>
     </div>
   </main>
 </div>
