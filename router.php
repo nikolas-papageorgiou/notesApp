@@ -9,8 +9,10 @@ function routeToController($uri,$routes){
     foreach($routes as $key=>$value){
         if($key===$uri['path']){
             require $routes[$key];
+            die();
         }
     }
+    
 }
 
 
