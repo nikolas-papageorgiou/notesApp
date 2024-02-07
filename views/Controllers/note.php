@@ -6,18 +6,12 @@ $config = require 'config.php';
 $heading = 'Note';
 $db = new Database($config['dbconfig']);
 
-//Here we execute the queries. First, get the string query from URI. In this case we get the user_id 
-//from the URL. For the time being we will bypass it by hardcode the user_id
-// $id = $_GET['user_id'];
-
-$note =$db->query("select * from posts where id = ?",[$_GET['id']])->fetch(PDO::FETCH_ASSOC);
+$note =$db->query("select * from posts where id = ?",[$_GET['id']])->findOrFail(PDO::FETCH_ASSOC);
 //In this point we must add authorization check.
-if(! $note){
-    abort();
-}
-//To do: the current user is hardcoded. Must be dynamic after authorization
+
+//To do: the current user is hardcoded. Must be dynamic. This section is responsible for authorization
+//This code authorizates that the current user created the giver
 $currentUser=2;
-if($note['user_id']!==$currentUser){
-    abort(Response::FORBIDDEN);
-}
+authorize($note['user_id']===$currentUser);
+
 require "/Programs/xampp/htdocs/notesApp/views/note.view.php";

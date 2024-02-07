@@ -10,10 +10,7 @@ $db = new Database($config['dbconfig']);
 //from the URL. For the time being we will bypass it by hardcode the user_id
 // $id = $_GET['user_id'];
 
-$notes =$db->query("select * from posts where user_id = ?",[2])->fetchAll(PDO::FETCH_ASSOC);
+$notes =$db->query("select * from posts where user_id = ?",[2])->get(PDO::FETCH_ASSOC);
 
-if(!$notes){
-    abort();
-}
 $heading = 'My Notes';
 require "/Programs/xampp/htdocs/notesApp/views/notes.view.php";
