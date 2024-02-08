@@ -14,4 +14,4 @@ $note =$db->query("select * from posts where id = ?",[$_GET['id']])->findOrFail(
 $currentUser=2;
 authorize($note['user_id']===$currentUser);
 
-require "/Programs/xampp/htdocs/notesApp/views/note.view.php";
+require "/Programs/xampp/htdocs/notesApp/views/notes/show.view.php";

@@ -1,8 +1,9 @@
 <?php
 $heading = 'Create new note';
 $config = require 'config.php';
-
 $db = new Database($config['dbconfig']);
+
+require 'Validator.php';
 
 
 //The controller, when called from index.php get data carried by $_GET super global.
@@ -19,23 +20,17 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 $errors=[];
 
 
-if(strlen(trim($_POST['body']))===0){
-    $errors['body']='Empty body is not allowed.';
+if(!Validator::bodyRestrictions($_POST['body'],1,1000)){
+    $errors['body']='The body must contain no more that 1000 characters.';
 }
 
-if(strlen(trim($_POST['body']))>1000){
-    $errors['body']='The body can not exceed 1000 characters.';
-}
+
 if(empty($errors)){
     $db->query('INSERT INTO posts(body,user_id) VALUES(:body,:user_id)',[
-        'body'=>$_POST['body'],
+        'body'=>trim($_POST['body']),
         'user_id'=>2
     ]);
 }
 
-
-
-
-    
 }
-require "/Programs/xampp/htdocs/notesApp/views/note-create.view.php";
+require "/Programs/xampp/htdocs/notesApp/views/notes/create.view.php";

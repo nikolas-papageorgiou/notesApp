@@ -50,4 +50,4 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
 
 <?php
 require "/Programs/xampp/htdocs/notesApp/views/Partials/foot.php";
-?>s
+?>

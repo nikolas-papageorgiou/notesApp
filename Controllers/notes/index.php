@@ -13,4 +13,4 @@ $db = new Database($config['dbconfig']);
 $notes =$db->query("select * from posts where user_id = ?",[2])->get(PDO::FETCH_ASSOC);
 
 $heading = 'My Notes';
-require "/Programs/xampp/htdocs/notesApp/views/notes.view.php";
+require "/Programs/xampp/htdocs/notesApp/views/notes/index.view.php";
