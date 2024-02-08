@@ -14,7 +14,8 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
         <ul>
         <li>
           <a href="/notesApp/index.php/note?id=<?= $note['id']?>" class='text-blue-500 hover:underline'>
-          <?= $note['body'] ?></a>
+          <!--With htmlspecialchars we catch XSS attacks. --> 
+          <?= htmlspecialchars($note['body']) ?></a>
         </li>
         <?php endforeach;?>
       </ul>
