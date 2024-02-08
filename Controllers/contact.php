@@ -1,3 +1,3 @@
 <?php
-$heading = 'Contact';
-require "/Programs/xampp/htdocs/notesApp/views/contact.view.php";
+
+require view("contact.view.php",['heading'=>'Contact Us']);

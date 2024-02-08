@@ -14,7 +14,7 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
           <p><?= htmlspecialchars($note['body']) ?></p>
     <p class = "mt-6 text-blue-500 hover:underline">
     
-      <a href="/notesApp/index.php/notes">Go back to notes</a>
+      <a href="/index.php/notes">Go back to notes</a>
 </p>
     </div>
   </main>

@@ -1,11 +1,11 @@
 <?php
 $heading = 'Create new note';
-$config = require 'config.php';
+$config = require base_path('config.php');
 $db = new Database($config['dbconfig']);
 
-require 'Validator.php';
+require base_path('Core/Validator.php');
 
-
+$errors=[];
 //The controller, when called from index.php get data carried by $_GET super global.
 //Then make a query to the db. The user_id for the time being is hardcoded. We have to 
 //make it dynamic. The :body and :user_id are wildcards, because that's how prepared
@@ -17,7 +17,7 @@ require 'Validator.php';
 //htmlspecialchars() function before displayed. Which means we catch it in the view page.
 if($_SERVER['REQUEST_METHOD']==='POST'){
 
-$errors=[];
+
 
 
 if(!Validator::bodyRestrictions($_POST['body'],1,1000)){
@@ -33,4 +33,8 @@ if(empty($errors)){
 }
 
 }
-require "/Programs/xampp/htdocs/notesApp/views/notes/create.view.php";
+
+view("notes/create.view.php",[
+    'heading'=>'Create new note',
+    'errors'=>$errors
+]);

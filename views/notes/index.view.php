@@ -13,7 +13,7 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
       <?php foreach($notes as $note):?>
         <ul>
         <li>
-          <a href="/notesApp/index.php/note?id=<?= $note['id']?>" class='text-blue-500 hover:underline'>
+          <a href="/index.php/note?id=<?= $note['id']?>" class='text-blue-500 hover:underline'>
           <!--With htmlspecialchars we catch XSS attacks. --> 
           <?= htmlspecialchars($note['body']) ?></a>
         </li>
@@ -21,7 +21,7 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
       </ul>
 
       <p class='mt-6'>
-        <a href="/notesApp/index.php/notes/create" class='text-blue-500 hover:underline '>Create Note</a>
+        <a href="/index.php/notes/create" class='text-blue-500 hover:underline '>Create Note</a>
       </p>
     </div>
 

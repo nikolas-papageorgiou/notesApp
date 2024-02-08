@@ -13,9 +13,9 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               
               <a href="/notesApp/" class="<?= (($_SERVER['REQUEST_URI']==="/notesApp/")||($_SERVER['REQUEST_URI']==="/notesApp/index.php"))? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-              <a href="/notesApp/index.php/about" class="<?= ($_SERVER['REQUEST_URI']==="/notesApp/index.php/about")? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About</a>
-              <a href="/notesApp/index.php/notes" class="<?= ($_SERVER['REQUEST_URI']==="/notesApp/index.php/notes")? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Notes</a>
-              <a href="/notesApp/index.php/contact" class="<?= ($_SERVER['REQUEST_URI']==="/notesApp/index.php/contact")? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Contact</a>
+              <a href="/index.php/about" class="<?= ($_SERVER['REQUEST_URI']==="/notesApp/index.php/about")? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About</a>
+              <a href="/index.php/notes" class="<?= ($_SERVER['REQUEST_URI']==="/notesApp/index.php/notes")? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Notes</a>
+              <a href="/index.php/contact" class="<?= ($_SERVER['REQUEST_URI']==="/notesApp/index.php/contact")? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Contact</a>
 
             </div>
           </div>

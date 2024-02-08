@@ -2,8 +2,7 @@
 //The problem is where should we make the connection with the database.
 //This is an issue when we introduced Containes concept. For now we just
 //Make the connection in the controller that will need the connection
-$config = require 'config.php';
-$heading = 'Note';
+$config = require base_path('config.php');
 $db = new Database($config['dbconfig']);
 
 $note =$db->query("select * from posts where id = ?",[$_GET['id']])->findOrFail(PDO::FETCH_ASSOC);
@@ -14,4 +13,8 @@ $note =$db->query("select * from posts where id = ?",[$_GET['id']])->findOrFail(
 $currentUser=2;
 authorize($note['user_id']===$currentUser);
 
-require "/Programs/xampp/htdocs/notesApp/views/notes/show.view.php";
+
+view("notes/show.view.php",[
+    'heading'=>'Note',
+    'note'=>$note
+]);
