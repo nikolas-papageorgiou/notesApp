@@ -22,9 +22,8 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
       require('@tailwindcss/forms'),
     ],
   }
-  ```
 -->
-<form action="" method="POST">
+<form action="store" method="POST">
   <div class="space-y-12">
     <div class="border-b border-gray-900/10 pb-12">
         <div class="col-span-full">

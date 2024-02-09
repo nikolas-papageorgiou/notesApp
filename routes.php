@@ -18,5 +18,5 @@
     $router->get('/index.php/notes','/Programs/xampp/htdocs/notesApp/Controllers/notes/index.php');
     $router->get('/index.php/notes/create','/Programs/xampp/htdocs/notesApp/Controllers/notes/create.php');
     $router->get('/index.php/note','/Programs/xampp/htdocs/notesApp/Controllers/notes/show.php');
-    $router->post('/index.php/notes/create','/Programs/xampp/htdocs/notesApp/Controllers/notes/create.php');
-    $router->delete('/index.php/note','/Programs/xampp/htdocs/notesApp/Controllers/index.php');
+    $router->post('/index.php/notes/store','/Programs/xampp/htdocs/notesApp/Controllers/notes/store.php');
+    $router->delete('/index.php/note','/Programs/xampp/htdocs/notesApp/Controllers/notes/destroy.php');

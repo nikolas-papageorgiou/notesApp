@@ -43,8 +43,6 @@ class Router{
     }
 
     public function route($uri,$method){
-
-        
         foreach($this->routes as $route){
            
             if($route['uri']===$uri['path'] && $route['method']===strtoupper($method)){

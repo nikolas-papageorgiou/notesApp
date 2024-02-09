@@ -14,7 +14,7 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
         <p class = "mt-6 text-blue-500 hover:underline">
           <a href="/index.php/notes">Go back to notes</a>
         </p>
-        <form method='POST' action='' class='mt-6'>
+        <form method='POST' action='/index.php/note' class='mt-6'>
           <!-- with the input tag we get the note id to pass to the target page for validation
           To evalute if the user is authorized to delete it -->
           <input type='hidden' name='_method' value='DELETE'>
