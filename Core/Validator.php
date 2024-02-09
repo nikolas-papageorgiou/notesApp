@@ -1,5 +1,5 @@
 <?php
-
+namespace Core;
 class Validator{
 
     //This function return a bool if the $string is between min and max in length

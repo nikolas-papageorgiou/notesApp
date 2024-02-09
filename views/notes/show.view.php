@@ -10,12 +10,16 @@ require "/Programs/xampp/htdocs/notesApp/views/Partials/nav.php";
   </header>
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-     
-          <p><?= htmlspecialchars($note['body']) ?></p>
-    <p class = "mt-6 text-blue-500 hover:underline">
-    
-      <a href="/index.php/notes">Go back to notes</a>
-</p>
+        <p><?= htmlspecialchars($note['body']) ?></p>
+        <p class = "mt-6 text-blue-500 hover:underline">
+          <a href="/index.php/notes">Go back to notes</a>
+        </p>
+        <form method='POST' action='' class='mt-6'>
+          <!-- with the input tag we get the note id to pass to the target page for validation
+          To evalute if the user is authorized to delete it -->
+          <input type= 'hidden' name='id' value="<?=$note['id']?>">
+          <button type='submit' class = 'text-red-500 text-sm'>Delete</button>
+        </form>
     </div>
   </main>
 </div>

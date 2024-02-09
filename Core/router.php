@@ -1,9 +1,10 @@
 <?php
 
-//parse_url splits the URI ito URL and string query.This function return an associative array
+//parse_url splits the URI ito URL and string query.
+//This function return an associative array.
 $uri = parse_url($_SERVER['REQUEST_URI']);
 require 'Response.php';
-$routes=require 'routes.php';
+$routes=require base_path('routes.php');
 
 function routeToController($uri,$routes){
     foreach($routes as $key=>$value){

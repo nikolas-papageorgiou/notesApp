@@ -1,6 +1,7 @@
 <?php
 
-
+namespace Core; 
+use PDO;
 class Database{
     private $connection;
     protected $statement;
@@ -11,7 +12,7 @@ class Database{
         dbname={$dbconfig['dbname']};
         charset={$dbconfig['charset']}";
        $this->connection = new PDO($dsn,$dbconfig['user'],$dbconfig['pass'],[
-        PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC
+       PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC
        ]);
     }
     public function query($query,$params=[]){

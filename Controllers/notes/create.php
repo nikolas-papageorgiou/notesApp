@@ -1,4 +1,8 @@
 <?php
+
+//This is the first option to connect to the namespace Core
+use Core\Database;
+use Core\Validator;
 $heading = 'Create new note';
 $config = require base_path('config.php');
 $db = new Database($config['dbconfig']);
