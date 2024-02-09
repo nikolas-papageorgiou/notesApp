@@ -1,5 +1,11 @@
 <?php
 use Core\Response;
+
+function abort($status_code=404){
+    http_response_code($status_code);
+    require '/Programs/xampp/htdocs/notesApp/views/'.$status_code.'.php';
+    die();
+}
 function dd($value){
 
     echo '<pre>';
