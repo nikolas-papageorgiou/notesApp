@@ -6,7 +6,7 @@ use Core\App;
 // $config = require base_path('config.php');
 // $db = new Database($config['dbconfig']);
 
-$db = App::container()->resolve('Core\Database');
+$db = App::resolve('Core\Database');
 
 
 //Here we execute the queries. First, get the string query from URI. In this case we get the user_id 

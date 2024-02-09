@@ -5,8 +5,9 @@ use Core\App;
 // //Make the connection in the controller that will need the connection
 // $config = require base_path('config.php');
 // $db = new Database($config['dbconfig']);
+//Problem solved
 
-$db = App::container()->resolve('Core\Database');
+$db = App::resolve('Core\Database');
 $currentUser=2;
 
     //form was submitted. delete the current note.

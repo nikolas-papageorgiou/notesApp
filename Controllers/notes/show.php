@@ -7,7 +7,7 @@ use Core\App;
 // $config = require base_path('config.php');
 // $db = new Database($config['dbconfig']);
 
-$db = App::container()->resolve('Core\Database');
+$db = App::resolve('Core\Database');
 
 $currentUser=2;
 
