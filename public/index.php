@@ -6,12 +6,18 @@ require BASE_PATH.'/Core/functions.php';
 
 
 
+
 spl_autoload_register(function ($class){
    
     $class=str_replace( '\\','/',$class);
  
     require base_path("{$class}.php");
 });
+
+//Require bootstrap.php
+
+require base_path('bootstrap.php');
+
 
 
 $router = new \Core\Router();

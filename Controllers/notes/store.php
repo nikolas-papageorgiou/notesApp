@@ -3,8 +3,15 @@
 use Core\Database;
 use Core\Validator;
 $heading = 'Create new note';
-$config = require base_path('config.php');
-$db = new Database($config['dbconfig']);
+use Core\App;
+// //The problem is where should we make the connection with the database.
+// //This is an issue when we introduced Containes concept. For now we just
+// //Make the connection in the controller that will need the connection
+// $config = require base_path('config.php');
+// $db = new Database($config['dbconfig']);
+
+$db = App::container()->resolve('Core\Database');
+
 
 require base_path('Core/Validator.php');
 
